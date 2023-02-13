@@ -59,8 +59,54 @@ let bestSellingAlbums = [
 
 // DO NOT MODIFY THE CODE ABOVE THIS LINE
 // WRITE YOUR CODE BELOW THIS LINE
+let averageSale = (bestSellingAlbums[0].sale + bestSellingAlbums[1].sale + bestSellingAlbums[2].sale + bestSellingAlbums[3].sale + bestSellingAlbums[4].sale + bestSellingAlbums[5].sale + bestSellingAlbums[6].sale + bestSellingAlbums[7].sale) / 8;
+console.log(averageSale);
 
+let currentYear = 2023;
+let age1 = currentYear - bestSellingAlbums[0].year;
+let age2 = currentYear - bestSellingAlbums[1].year;
+let age3 = currentYear - bestSellingAlbums[2].year;
+let age4 = currentYear - bestSellingAlbums[3].year;
+let age5 = currentYear - bestSellingAlbums[4].year;
+let age6 = currentYear - bestSellingAlbums[5].year;
+let age7 = currentYear - bestSellingAlbums[6].year;
+let age8 = currentYear - bestSellingAlbums[7].year;
 
+let averageAge = (age1 + age2 + age3 + age4 + age5 + age6 + age7 + age8) / 8;
+console.log(averageAge);
+
+let newestAlbum = bestSellingAlbums[6];
+let oldestAlbum = bestSellingAlbums[bestSellingAlbums.length - 5];
+
+console.log(newestAlbum);
+console.log(oldestAlbum);
+
+let albumsOfEagles = {
+    sales: bestSellingAlbums[4]["sale"] + bestSellingAlbums[5].sale,
+    isBothSoftRock: bestSellingAlbums[4]["genres"][1] === bestSellingAlbums[5].genres[0]
+};
+console.log(albumsOfEagles.sales);
+console.log(albumsOfEagles.isBothSoftRock);
+
+bestSellingAlbums[8] = {
+    artist: "Tracy Chapman",
+    title: "Tracy Chapman",
+    year: 1988,
+    genres: ["folk rock"],
+    sale: 20000000
+};
+console.log(bestSellingAlbums);
+
+bestSellingAlbums[0].iLikeIt = false;
+bestSellingAlbums[1].iLikeIt = true;
+bestSellingAlbums[2].iLikeIt = true;
+bestSellingAlbums[3].iLikeIt = false;
+bestSellingAlbums[4].iLikeIt = true;
+bestSellingAlbums[5].iLikeIt = false;
+bestSellingAlbums[6].iLikeIt = true;
+bestSellingAlbums[7].iLikeIt = true;
+bestSellingAlbums[8].iLikeIt = true;
+console.log(bestSellingAlbums);
 
 // DO NOT MODIFY THE CODE BELOW THIS LINE
 let toExport;
